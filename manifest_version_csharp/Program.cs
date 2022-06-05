@@ -10,7 +10,8 @@ namespace manifest_version_csharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Environment.OSVersion.VersionString);
+            var info = Environment.OSVersion.Version;
+            Console.WriteLine("Windows Version: {0}.{1}.{2}", info.Major, info.Minor, info.Build);
         }
     }
 }

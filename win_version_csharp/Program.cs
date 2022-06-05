@@ -16,8 +16,7 @@ namespace win_version_csharp
     {
         static void Main(string[] args)
         {
-            VersionInfo info = new VersionInfo();
-            if (WinVersion.GetVersion(out info))
+            if (WinVersion.GetVersion(out var info))
             {
                 Console.WriteLine("Windows Version: {0}.{1}.{2}", info.Major, info.Minor, info.BuildNum);
                 Console.ReadKey();
