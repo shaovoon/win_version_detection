@@ -12,6 +12,6 @@ int main()
 	VersionInfo info;
     if (WinVersion::GetVersion(info))
     {
-        std::cout << "Windows Version : " << info.Major << "." << info.Minor << "." << info.BuildNum << "\n";
+        std::cout << "Windows Version: " << info.Major << "." << info.Minor << "." << info.BuildNum << "\n";
     }
 }
