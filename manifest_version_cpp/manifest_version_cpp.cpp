@@ -8,6 +8,6 @@ int main()
     osv.dwOSVersionInfoSize = sizeof(OSVERSIONINFOW);
     if (GetVersionExW(&osv))
     {
-        std::cout << osv.dwMajorVersion << "." << osv.dwMinorVersion << "." << osv.dwBuildNumber << "\n";
+        std::cout << "Windows Version: " << osv.dwMajorVersion << "." << osv.dwMinorVersion << "." << osv.dwBuildNumber << "\n";
     }
 }
