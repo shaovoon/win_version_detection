@@ -55,5 +55,13 @@ namespace win_version_csharp
             }
             return false;
         }
+        public static bool IsBuildNumGreaterOrEqual(uint buildNumber)
+        {
+            if (GetVersion(out var info))
+            {
+                return buildNumber >= info.BuildNum;
+            }
+            return false;
+        }
     }
 }

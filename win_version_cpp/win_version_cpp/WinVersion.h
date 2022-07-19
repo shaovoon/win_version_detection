@@ -18,5 +18,6 @@ class WinVersion
 {
 public:
 	static bool GetVersion(VersionInfo& info);
+	static bool IsBuildNumGreaterOrEqual(unsigned int buildNumber);
 };
 

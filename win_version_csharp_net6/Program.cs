@@ -8,4 +8,5 @@ using win_version_csharp_net6;
 
 WinVersion.GetVersion(out var info);
 Console.WriteLine("Windows Version: {0}.{1}.{2}", info.Major, info.Minor, info.BuildNum);
+Console.WriteLine("IsBuildNumGreaterOrEqual(22000): {0}", WinVersion.IsBuildNumGreaterOrEqual(22000));
 Console.ReadKey();

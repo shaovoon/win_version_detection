@@ -14,4 +14,6 @@ int main()
     {
         std::cout << "Windows Version: " << info.Major << "." << info.Minor << "." << info.BuildNum << "\n";
     }
+	std::cout << "IsBuildNumGreaterOrEqual(22000): " << WinVersion::IsBuildNumGreaterOrEqual(22000) << "\n";
+    return 0;
 }

@@ -21,11 +21,18 @@ namespace win_version_csharp_net6
 
         public static void GetVersion(out VersionInfo info)
         {
-            info.Major = Environment.OSVersion.Version.Major;
-            info.Minor = Environment.OSVersion.Version.Minor;
-            info.BuildNum = Environment.OSVersion.Version.Build;
+            var version = Environment.OSVersion.Version;
+            info.Major = version.Major;
+            info.Minor = version.Minor;
+            info.BuildNum = version.Build;
             if (info.BuildNum >= 22000)
                 info.Major = 11;
         }
+        public static bool IsBuildNumGreaterOrEqual(uint buildNumber)
+        {
+            GetVersion(out var info);
+            return buildNumber >= info.BuildNum;
+        }
+
     }
 }

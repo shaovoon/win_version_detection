@@ -26,3 +26,13 @@ bool WinVersion::GetVersion(VersionInfo& info)
 	}
 	return false;
 }
+
+bool WinVersion::IsBuildNumGreaterOrEqual(unsigned int buildNumber)
+{
+	VersionInfo info;
+	if (GetVersion(info))
+	{
+		return (buildNumber >= info.BuildNum);
+	}
+	return false;
+}
