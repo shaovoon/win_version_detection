@@ -1,6 +1,6 @@
 // The MIT License (MIT)
-// Windows Version Detection 1.0.0
-// Copyright (C) 2022 by Shao Voon Wong (shaovoon@yahoo.com)
+// Windows Version Detection 1.1.0
+// Copyright (C) 2022 - 2023 by Shao Voon Wong (shaovoon@yahoo.com)
 //
 // http://opensource.org/licenses/MIT
 
@@ -32,7 +32,7 @@ bool WinVersion::IsBuildNumGreaterOrEqual(unsigned int buildNumber)
 	VersionInfo info;
 	if (GetVersion(info))
 	{
-		return (buildNumber >= info.BuildNum);
+		return (info.BuildNum >= buildNumber);
 	}
 	return false;
 }
