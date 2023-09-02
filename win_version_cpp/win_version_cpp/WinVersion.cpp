@@ -1,8 +1,13 @@
 // The MIT License (MIT)
-// Windows Version Detection 1.1.0
+// Windows Version Detection 1.2.0
 // Copyright (C) 2022 - 2023 by Shao Voon Wong (shaovoon@yahoo.com)
 //
 // http://opensource.org/licenses/MIT
+
+// History
+// 1.0.0: First Releease
+// 1.1.0: Added IsBuildNumGreaterOrEqual()
+// 1.2.0: Removed the Windows 11 build number check to set major version to 11.
 
 #include "WinVersion.h"
 #include <Windows.h>
@@ -20,8 +25,7 @@ bool WinVersion::GetVersion(VersionInfo& info)
 		info.Major = osv.dwMajorVersion;
 		info.Minor = osv.dwMinorVersion;
 		info.BuildNum = osv.dwBuildNumber;
-		if (osv.dwBuildNumber >= 22000)
-			info.Major = 11;
+
 		return true;
 	}
 	return false;
